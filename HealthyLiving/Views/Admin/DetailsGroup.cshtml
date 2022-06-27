@@ -1,0 +1,46 @@
+﻿@model HealthyLiving.Models.FoodGroup
+
+@{
+    ViewBag.Title = "details";
+}
+
+<div>
+    <div class="details-foodgroup-container">
+
+        <div class="details-foodgroup-heading">
+            <h2>Food Group Details</h2>
+        </div>
+
+        <div class="details-name">
+            <div class="details-name-label">
+                <p>@Html.DisplayNameFor(model => model.FoodGroupName):</p>
+            </div>
+            <div class="details-name-value">
+                <p>@Html.DisplayFor(model => model.FoodGroupName)</p>
+                <hr />
+            </div>
+        </div>
+        <div class="details-information">
+            <div class="details-information-label">
+                <p>@Html.DisplayNameFor(model => model.FoodGroupInformation):</p>
+            </div>
+            <div class="details-information-value">
+                <p>@Html.DisplayFor(model => model.FoodGroupInformation)</p>
+                <hr />
+            </div>
+        </div>
+        <div class="details-image">
+            <div class="details-image-label">
+                <p>@Html.DisplayNameFor(model => model.FoodGroupImageUrl):</p>
+            </div>
+            <div class="details-image-value">
+                <p>@Html.DisplayFor(model => model.FoodGroupImageUrl)</p>
+            </div>
+        </div>
+        <div class="details-navigation">
+            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Edit", "EditGroup", new { id = Model.FoodGroupId })
+        </div>
+
+    </div>
+</div>

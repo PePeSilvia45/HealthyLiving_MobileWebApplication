@@ -1,0 +1,56 @@
+﻿@model HealthyLiving.Models.FoodGroup
+
+@{
+    ViewBag.Title = "delete";
+}
+
+<h2>delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="delete-foodgroup-container">
+            <div class="delete-foodgroup-heading">
+                <h2>FoodGroup</h2>
+            </div>
+            <div class="delete-name">
+                <div class="delete-name-label">
+                    @Html.DisplayNameFor(model => model.FoodGroupName)
+                </div>
+                <div class="delete-name-value">
+                    @Html.DisplayFor(model => model.FoodGroupName)
+                </div>
+            </div>
+            <div class="delete-information">
+                <div class="delete-information-label">
+                    @Html.DisplayNameFor(model => model.FoodGroupInformation)
+                </div>
+                <div class="delete-information-value">
+                    @Html.DisplayFor(model => model.FoodGroupInformation)
+                </div>
+            </div>
+            <div class="delete-image">
+                <div class="delete-image-label">
+                    @Html.DisplayNameFor(model => model.FoodGroupImageUrl)
+                </div>
+                <div class="delete-image-value">
+                    @Html.DisplayFor(model => model.FoodGroupImageUrl)
+                </div>
+            </div>
+            <div class="delete-submit-btn">
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                </div>
+            </div>
+            <div class="delete-backtogroup">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    }
+</div>
+
+

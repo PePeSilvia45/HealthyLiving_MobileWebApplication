@@ -1,0 +1,69 @@
+﻿@model HealthyLiving.Models.FoodItem
+
+@{
+    ViewBag.Title = "detailsItem";
+}
+
+<div>
+    <div class="details-fooditem-container">
+
+        <div class="details-foodgroup-heading">
+            <h2>FoodItem</h2>
+        </div>
+
+        <div class="details-fooditem-groupid">
+            <div class="details-label">
+                <p>@Html.DisplayNameFor(model => model.FoodGroup.FoodGroupId)</p>
+            </div>
+            <div class="details-value">
+                <p>@Html.DisplayFor(model => model.FoodGroup.FoodGroupId)</p>
+                <hr />
+            </div>
+        </div>
+
+        <div class="details-fooditem-name">
+            <div class="details-label">
+                <p>@Html.DisplayNameFor(model => model.FoodItemName)</p>
+            </div>
+            <div class="details-value">
+                <p>@Html.DisplayFor(model => model.FoodItemName)</p>
+            </div>
+        </div>
+
+        <div class="details-fooditem-information">
+            <div class="details-label">
+                <p>@Html.DisplayNameFor(model => model.FoodItemInformation)</p>
+            </div>
+            <div class="details-value">
+                <p>@Html.DisplayFor(model => model.FoodItemInformation)</p>
+                <hr />
+            </div>
+        </div>
+
+        <div class="details-fooditem-calorie">
+            <div class="details-label">
+                <p>@Html.DisplayNameFor(model => model.CalorieCount)</p>
+            </div>
+            <div class="details-value">
+                <p>@Html.DisplayFor(model => model.CalorieCount)</p>
+                <hr />
+            </div>
+        </div>
+
+        <div class="details-fooditem-image">
+            <div class="details-label">
+                <p>@Html.DisplayNameFor(model => model.ImageUrl)</p>
+            </div>
+            <div class="details-value">
+                <p>@Html.DisplayFor(model => model.ImageUrl)</p>
+                <hr />
+            </div>
+        </div>
+
+        <div class="details-item-navigation">
+            @Html.ActionLink("Back to List", "ViewItems", new { id = Model.FoodItemId })
+            @Html.ActionLink("Edit", "EditItem", new { id = Model.FoodItemId })
+        </div>
+
+    </div>
+</div>

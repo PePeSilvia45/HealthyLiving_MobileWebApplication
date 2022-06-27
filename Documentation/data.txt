@@ -1,0 +1,19 @@
+user one log in:
+
+username - member1@gmail.com
+password - Password1
+
+user two log in:
+
+username - member2@gmail.com
+password - Password2
+
+user three log in:
+
+username - member3@gmail.com
+password - Password3
+
+admin user log in:
+
+username - admin@healthyliving.com
+password - Admin123

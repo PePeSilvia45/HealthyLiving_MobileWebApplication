@@ -1,0 +1,2886 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'lato', sans-serif !important;
+    font-weight: bold !important;
+}
+p {
+    font-size: 16px !important;
+    color: #000;
+}
+/*=====================================
+    splashscreen page
+    =====================================*/
+
+.splashscreen-container {
+    text-align: center;
+    width: 75%;
+    height: 300px;
+    position: absolute;
+    background-color: #c1ff94;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 10px #333;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto;
+}
+
+.splashscreen-heading {
+    background-color: #37d629;
+    border-radius: 25px 0 0 0;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+    text-decoration: underline;
+}
+
+    .splashscreen-heading h3 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        font-size: 35px;
+        color: #000;
+    }
+
+.splashscreen-login {
+    height: 50px;
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.splashscreen-register {
+    height: 50px;
+    margin: auto;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.splashscreen-guest {
+    height: 50px;
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+    .splashscreen-login input,
+    .splashscreen-register input,
+    .splashscreen-guest input {
+        background-color: #37d629;
+        color: #000;
+        font-weight: bold;
+        border: 1px solid #555;
+        width: 25%;
+        height: 50px;
+    }
+
+        .splashscreen-login input:hover,
+        .splashscreen-register input:hover,
+        .splashscreen-guest input:hover {
+            background-color: #c1ff94;
+            color: #000;
+            box-shadow: 0 0 1px 2px #37d629;
+            width: 100px;
+            align-content: center;
+        }
+/* =====================================
+    nav bar
+    =====================================*/
+
+.navbar ul {
+    list-style: none;
+}
+
+    .navbar ul li {
+        display: inline-block;
+        padding: 0 7px;
+        position: relative;
+    }
+
+        .navbar ul li:not(:last-child)::after {
+            content: "";
+            border: 1px solid #e2e2e2;
+            border-width: 1px 1px 0 0;
+            position: absolute;
+            right: -1px;
+            top: 25%;
+            height: 50%;
+        }
+
+.nav-center ul li {
+    margin-top: 5%;
+}
+
+.nav-container {
+    background-color: #37d629;
+    padding: 2px 10% 2px 10%;
+    box-shadow: 5px 5px #888;
+    border-radius: 25px 0 0 0;
+}
+
+.navbar li a {
+    color: #000 !important;
+    margin: auto !important;
+    padding: 10px !important;
+}
+
+    .navbar li a:hover {
+        color: #c1ff94 !important;
+        text-decoration: underline !important;
+        margin: auto !important;
+        padding: 10px !important;
+    }
+
+.navbar {
+    padding: 5px 10px 0 10px;
+    background-color: #999 !important;
+    border: none !important;
+}
+
+/*=====================================
+    footer
+    =====================================*/
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 20px;
+    background-color: #37d629;
+    border-radius: 0 0 25px 0;
+    box-shadow: 5px 10px #888888;
+}
+
+.footer-author {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: #000;
+}
+
+.footer-company {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: #000;
+}
+
+.footer-contact {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+    .footer-contact a {
+        color: #000;
+    }
+
+        .footer-contact a:hover {
+            color: #c1ff94;
+            text-decoration: underline;
+        }
+/*=====================================
+    index page guest page
+    =====================================*/
+.index-container-guest {
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+    .index-container-guest .appinformation {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 10px;
+        border-radius: 25px 0;
+        box-shadow: #555 3px 1px;
+    }
+
+        .index-container-guest .appinformation h1 {
+            margin: 0;
+        }
+
+.index-container-guest .howitworks {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+    .index-container-guest .howitworks h1 {
+        margin: 0;
+    }
+
+.index-container-guest .appinformation-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+    background-color: #37d629;
+    text-decoration: underline;
+    color: #000;
+}
+
+.index-container-guest .appinformation-body {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 2px 4px;
+    text-align: center;
+}
+
+.index-container-guest .howitworks-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+    background-color: #37d629;
+    text-decoration: underline;
+    color: #000;
+}
+
+.index-container-guest .howitworks-body {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin: 2px 4px;
+    text-align: center;
+}
+
+/*=====================================
+    Register page
+    =====================================*/
+
+.register-container {
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    margin: auto;
+    width: 400px;
+    height: fit-content;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(9, auto);
+    gap: 2px;
+    box-sizing: border-box;
+}
+
+    .register-container input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+.register-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+    background-color: #37d629;
+    color: #000;
+}
+/*Register get email*/
+.register-email {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.register-email-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    align-content: end;
+    margin: 20px 10px 5px 10px;
+    text-align: right;
+}
+
+.register-email-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin: 20px 10px 5px 10px;
+}
+/*Resgister get first name*/
+.register-firstname {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.register-firstname-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    margin: 5px 10px;
+    text-align: right;
+}
+
+.register-firstname-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin: 5px 10px;
+}
+/*Resgister get last name*/
+.register-lastname {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.register-lastname-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    text-align: right;
+    margin: 5px 10px;
+}
+
+.register-lastname-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin: 5px 10px;
+}
+/*Resgister get mobile number*/
+.register-mobile {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.register-mobile-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    text-align: right;
+    margin: 5px 10px;
+}
+
+.register-mobile-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin-left: 0px;
+    margin: 5px 10px;
+}
+/*Resgister get password*/
+.register-password {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.register-password-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    text-align: right;
+    margin: 5px 10px;
+}
+
+.register-password-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin: 5px 10px;
+}
+/*Resgister get confirm password*/
+.register-confirmpassword {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.register-confirmpassword-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    white-space: nowrap;
+    text-align: right;
+    margin: 5px 10px;
+}
+
+.register-confirmpassword-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin: 5px 10px;
+}
+
+.register-login {
+    color: #000;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+    .register-login p a {
+        color: #000;
+        padding-left: 10px;
+    }
+
+        .register-login p a:hover {
+            color: #37d629;
+        }
+
+/*register submit button*/
+.register-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    padding-right: 40px;
+}
+
+    .register-btn input {
+        background-color: #37d629;
+        color: #000;
+        font-weight: bold;
+        border: 1px solid #555;
+        width: 150px;
+        margin-left: 20px;
+    }
+
+        .register-btn input:hover {
+            background-color: #c1ff94;
+            color: #000;
+            box-shadow: 0 0 1px 2px #37d629;
+            width: 150px;
+            align-content: center;
+        }
+/*=====================================
+    Login page
+    =====================================*/
+
+.login-container {
+    background-color: #c1ff94;
+    margin: auto;
+    width: 400px;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888888;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+    .login-container input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+/*log in heading*/
+.login-heading {
+    background-color: #37d629;
+    color: #000;
+    border-radius: 25px 0 0 0;
+    margin: 0;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/*login get email*/
+.login-email {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 15% 25% 1fr;
+}
+
+.login-email-icon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+}
+
+.login-email-label {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+}
+
+.login-email-input {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin-left: 0px;
+}
+
+    .login-email-input input {
+        background-color: #37d629 !important;
+    }
+
+/*login get password*/
+.login-password {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 15% 25% 1fr;
+}
+
+.login-password-icon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+}
+
+.login-password-label {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+}
+
+.login-password-input {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 80%;
+    margin-left: 0px;
+}
+/*Login remember me check*/
+.login-rememberme {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+    .login-rememberme checkbox {
+        color: #37d629;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-right: 0px;
+    }
+
+/*Submit button*/
+.login-submit {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    padding-right: 100px;
+}
+
+.login-submit-btn input {
+    background-color: #37d629;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #555;
+    width: 150px;
+}
+
+    .login-submit-btn input:hover {
+        background-color: #c1ff94;
+        color: #000;
+        box-shadow: 0 0 1px 2px #37d629;
+        width: 150px;
+        align-content: center;
+    }
+/*Regester as new user*/
+.login-register {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+    .login-register p a {
+        color: #000;
+    }
+
+        .login-register p a:hover {
+            color: #37d629;
+            text-decoration: underline;
+        }
+
+/*=====================================
+    index page user page
+    =====================================*/
+
+.index-container-user {
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+    .index-container-user .appinformation {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 10px;
+        border-radius: 25px 0;
+        box-shadow: #555 3px 1px;
+    }
+
+        .index-container-user .appinformation h1 {
+            margin: 0;
+        }
+
+    .index-container-user .howitworks {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        margin: 10px;
+        border-radius: 25px 0;
+        box-shadow: #555 3px 1px;
+    }
+
+        .index-container-user .howitworks h1 {
+            margin: 0;
+        }
+
+    .index-container-user .calorie-info-box {
+        background-color: #37d629;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 10px;
+        border-radius: 23px 5px 5px 5px;
+        box-shadow: 2px 4px #555;
+        margin: 8px 8px 2px 8px;
+        color: #000;
+    }
+
+    .index-container-user .water-info-box {
+        background-color: #37d629;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 10px;
+        box-shadow: 2px 4px #555;
+        border-radius: 5px;
+        margin: 2px 2px 2px 8px;
+        color: #000;
+    }
+
+
+    .index-container-user .steps-info-box {
+        background-color: #37d629;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 10px;
+        box-shadow: 2px 4px #555;
+        border-radius: 5px;
+        margin: 2px 8px 2px 2px;
+        color: #000;
+    }
+
+        .index-container-user .calorie-info-box h2,
+        .index-container-user .water-info-box h2,
+        .index-container-user .steps-info-box h2 {
+            font-weight: bold;
+        }
+
+    .index-container-user .appinformation-heading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 0;
+        padding: 5px;
+        border-radius: 25px 0 0 0;
+        text-align: center;
+        background-color: #37d629;
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .index-container-user .appinformation-body {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        margin: 2px 4px;
+        text-align: center;
+        color: #000;
+    }
+
+    .index-container-user .howitworks-heading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin: 0;
+        padding: 5px;
+        border-radius: 25px 0 0 0;
+        text-align: center;
+        background-color: #37d629;
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .index-container-user .howitworks-body {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        margin: 2px 4px;
+        text-align: center;
+        color: #000;
+    }
+
+        .index-container-user .appinformation-body p,
+        .index-container-user .howitworks-body p {
+            font-size: 16px;
+            margin: 15px 100px 20px 100px;
+        }
+/*=====================================
+    Podcast page
+    =====================================*/
+.podcast-container {
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 2px;
+    box-sizing: border-box;
+}
+
+.podcast-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+}
+
+.podcast-information {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 100%;
+}
+
+.podcast-information-description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 20px;
+    margin: 100px 50px 20px 100px;
+}
+
+.podcast-information-logo {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 50px 50px 20px 5px;
+}
+
+.podcast-player {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0 50px 20px 50px;
+}
+
+    .podcast-player table {
+        width: 80%;
+        margin: auto;
+        border: 2px solid #c1ff94;
+        box-shadow: #555 10px 5px;
+    }
+
+        .podcast-player table thead tr th {
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .podcast-player table tbody tr td {
+            border: 2px solid #c1ff94;
+        }
+
+        .podcast-player table td, .podcast-player table th {
+            font-size: 12px;
+            padding: 3px 7px 2px 7px;
+        }
+
+        .podcast-player table th {
+            font-size: 20px;
+            text-align: center;
+            background-color: #37d629;
+        }
+
+        .podcast-player table td {
+            font-size: 16px;
+            text-align: center;
+            padding-top: 5px;
+            color: #000000;
+            background-color: #37d629;
+        }
+/*=====================================
+    Understanding Calories container
+    =====================================*/
+.understanding-container {
+    margin: auto;
+    width: fit-content;
+    height: auto;
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    border-radius: 25px 0;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+}
+
+    .understanding-container h1 {
+        background-color: #37d629;
+        border-radius: 25px 0 0 0;
+        margin: 0;
+        padding: 15px;
+        text-decoration: underline;
+        color: #000;
+    }
+
+    .understanding-container h2 {
+        background-color: #37d629;
+        border-radius: 25px 0 0 0;
+        padding: 15px;
+        margin: 0;
+        text-decoration: underline;
+        color: #000;
+        top: 0;
+    }
+
+    .understanding-container p {
+        font-size: 16px;
+    }
+
+.understanding-text-block {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+}
+
+.understanding-information {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+.calories-and-energy {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+.checking-calories {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+.calorie-counters {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+.burning-calories {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+    border-radius: 25px 0;
+    box-shadow: #555 3px 1px;
+}
+
+/*=====================================
+    Food Groups page
+    =====================================*/
+
+.foodgroup-container {
+    margin: auto;
+    width: 70%;
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.foodgroup-img {
+    border: 1px solid #37d629;
+    border-radius: 5px;
+    padding: .5px;
+    object-fit: contain;
+}
+
+
+.foodgroup a {
+    margin: auto;
+}
+
+.foodgroup-heading {
+    background-color: #37d629;
+    color: #000;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+    text-decoration: underline;
+}
+
+.foodgroup-information {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+}
+
+.image-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000;
+}
+
+.foodgroup {
+    margin: auto;
+    padding: 15px;
+}
+
+    .foodgroup:hover .overlay {
+        bottom: 0;
+        width: 75%;
+    }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 100%;
+    background-color: rgb(55, 214, 41, .9);
+    border-radius: 25px 0;
+    box-shadow: 1px 2px #555;
+    overflow: hidden;
+    width: 0;
+    height: 20%;
+    transition: 0.75s ease;
+    margin: 5px;
+}
+
+    .overlay h4 {
+        color: #000;
+        font-size: 28px;
+        margin: auto;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+/*=====================================
+    Food item List page
+    =====================================*/
+.viewitem-container {
+    margin: auto;
+    width: 80%;
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.viewitem-heading {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    border-radius: 25px 0 0 0;
+    margin: 0;
+    padding: 10px;
+    background-color: #37d629;
+    color: #000;
+    text-decoration: underline;
+}
+
+.back-button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100px;
+    height: 40px;
+    margin: 20px auto 10px 10px;
+    background-color: #c1ff94;
+    border: 1px solid #c1ff94;
+    box-shadow: 1px 2px #888888;
+    border-radius: 25px;
+}
+
+    .back-button:hover {
+        background-color: #37d629;
+        color: grey;
+        margin: 21px auto 10px 12px;
+        box-shadow: 0 0 #000;
+    }
+
+
+    .back-button a {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: auto;
+        gap: 5px;
+        color: #808080;
+    }
+
+    .back-button img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: 5px;
+    }
+
+    .back-button p {
+        margin-top: 10px;
+        text-align: left;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        color: #000;
+        margin: auto;
+    }
+
+.viewitem-information {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.viewitems-item {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 90%;
+    margin: auto;
+    margin-top: 0;
+}
+
+    .viewitems-item hr {
+        height: 1px;
+        background-color: #37d629;
+        border: none;
+    }
+
+.food-img img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #808080;
+    border-radius: 5px;
+}
+
+.food-name p {
+    padding: 50px 0;
+    font-size: 16px;
+}
+
+.food-description p {
+    padding: 25px 10px 0 0;
+    font-size: 16px;
+}
+
+.food-calories p {
+    padding: 50px 0;
+}
+/*=====================================
+    Food Group List Admin page
+    =====================================*/
+.admin-foodgroup-container {
+    background-color: #c1ff94;
+    color: #000;
+    margin: 0;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888;
+    width: 80%;
+    margin: auto;
+}
+
+.admin-foodgroup-heading {
+    background-color: #37d629;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 25px 0 0 0;
+    padding: 10px;
+}
+
+.admin-foodgroup-items {
+    padding: 15px;
+}
+
+    .admin-foodgroup-items hr {
+        height: 1px;
+        background-color: #37d629;
+        border: none;
+        width: 80%
+    }
+
+.admin-food-img img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #37d629;
+    border-radius: 5px;
+}
+
+.admin-foodgroup-name {
+    height: 150px;
+    font-size: 20px;
+}
+
+    .admin-foodgroup-name p {
+        margin-top: 60px;
+    }
+
+.admin-control {
+    height: fit-content;
+}
+
+    .admin-control ul {
+        margin-top: 60px;
+    }
+
+    .admin-control li {
+        display: inline;
+        color: black;
+    }
+
+    .admin-control ul li a {
+        background-color: #37d629;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid #37d629;
+        border-radius: 25px;
+        box-shadow: 1px 2px #555;
+    }
+
+        .admin-control ul li a:hover {
+            background-color: #c1ff94;
+            border: 1px solid #37d629;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+
+/*=====================================
+    Edit Food Group Admin page
+    =====================================*/
+
+.edit-foodgroup-container {
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    margin: auto;
+    box-shadow: 5px 10px #888;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    width: 60%;
+}
+
+.edit-foodgroup-heading {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+}
+
+.edit-foodgroupname {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px 20px 10px 20px;
+}
+
+    .edit-foodgroupname .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-foodgroupname .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-foodgroupname .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-foodgroupname .edit-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.edit-foodgroupinformation {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-foodgroupinformation .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-foodgroupinformation .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-foodgroupinformation .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-foodgroupinformation .edit-input textarea {
+            height: 150px;
+            background-color: #37d629;
+            color: #000;
+        }
+
+            .edit-foodgroupinformation .edit-input textarea::-webkit-scrollbar {
+                width: 1em;
+            }
+
+            .edit-foodgroupinformation .edit-input textarea::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px #555;
+            }
+
+            .edit-foodgroupinformation .edit-input textarea::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: 0 0 6px #555;
+                background-color: #c1ff94;
+                outline: 1px solid #888;
+            }
+
+.edit-foodgroupurl {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-foodgroupurl .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-foodgroupurl .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-foodgroupurl .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-foodgroupurl .edit-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.editgroup-submit-btn {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin: 10px 40px 10px auto;
+    padding: 0px 40px;
+}
+
+    .editgroup-submit-btn input {
+        background-color: #37d629;
+        color: #000;
+        font-weight: bold;
+        border: 1px solid #555;
+        width: 150px;
+    }
+
+        .editgroup-submit-btn input:hover {
+            background-color: #c1ff94;
+            color: #000;
+            box-shadow: 0 0 1px 2px #37d629;
+            align-content: center;
+        }
+
+.edit-backtogroup {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    margin: 10px 20px 20px 20px;
+}
+
+    .edit-backtogroup a {
+        background-color: #37d629;
+        box-shadow: 2px 1px 0 0 #555;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+        .edit-backtogroup a:hover {
+            background-color: #c1ff94;
+            box-shadow: none;
+            border: 1px solid #37d629;
+            border-radius: 25px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+/*=====================================
+    Details Food Group Admin page
+    =====================================*/
+.details-foodgroup-container {
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    margin: auto;
+    box-shadow: 5px 10px #888;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    width: 60%;
+}
+
+    .details-foodgroup-container hr {
+        height: 1px;
+        background-color: #37d629;
+        border: none;
+        width: 80%;
+        margin-left: 0;
+    }
+
+.details-foodgroup-heading {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+}
+
+.details-name {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px 20px 10px 20px;
+}
+
+    .details-name .details-name-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-name .details-name-label p {
+            width: 100%;
+            text-align: right;
+            padding: 0 15px 0 0;
+        }
+
+    .details-name .details-name-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-name .details-name-value p {
+            width: 300px
+        }
+
+
+
+.details-information {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-information .details-information-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-information .details-information-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-information .details-information-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-information .details-information-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-image {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-image .details-image-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-image .details-image-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-image .details-image-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-image .details-image-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-navigation {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    padding: 20px;
+    margin: 10px
+}
+
+    .details-navigation a {
+        background-color: #37d629;
+        box-shadow: 2px 1px 0 0 #555;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+        .details-navigation a:hover {
+            background-color: #c1ff94;
+            box-shadow: none;
+            border: 1px solid #37d629;
+            border-radius: 25px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+/*======================================
+       Admin Food Item List
+    ========================================*/
+.admin-fooditem-container {
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+
+    .admin-fooditem-container hr {
+        border: none;
+        height: 1px;
+        background-color: #37d629;
+        width: 80%;
+    }
+
+.admin-fooditem-heading {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    text-decoration: underline;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-fooditem-createbtn {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 50px;
+    text-align: center;
+}
+
+    .admin-fooditem-createbtn ul li {
+        display: inline;
+    }
+
+        .admin-fooditem-createbtn ul li a {
+            background-color: #37d629;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 25px;
+            box-shadow: 1px 2px #555;
+        }
+
+            .admin-fooditem-createbtn ul li a:hover {
+                background-color: #c1ff94;
+                margin: 1px 0 0 1px;
+                border: 1px solid #37d629;
+                box-shadow: none;
+                text-decoration: underline;
+            }
+
+.admin-fooditem-items {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
+    .admin-fooditem-items .admin-control ul {
+        margin-top: 10px;
+    }
+
+/*=====================================
+    Admin Edit Item
+    =====================================*/
+
+.edit-fooditem-container {
+    background-color: #c1ff94;
+    color: #000;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888;
+    margin: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+}
+
+.edit-fooditem-heading {
+    background-color: #37d629;
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 25px 0 0 0;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.edit-fooditem-name {
+    margin: 20px 20px 10px 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+    .edit-fooditem-name .edit-label {
+        white-space: nowrap;
+        color: black;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+        .edit-fooditem-name .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-fooditem-name .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-fooditem-name .edit-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.edit-fooditem-information {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-fooditem-information .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-fooditem-information .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 10px 0 0;
+        }
+
+    .edit-fooditem-information .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-fooditem-information .edit-input textarea {
+            background-color: #37d629;
+            color: #000;
+            height: 150px;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+            .edit-fooditem-information .edit-input textarea::-webkit-scrollbar {
+                width: 1em;
+            }
+
+            .edit-fooditem-information .edit-input textarea::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px #555;
+            }
+
+            .edit-fooditem-information .edit-input textarea::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: 0 0 6px #555;
+                background-color: #c1ff94;
+                outline: 1px solid #888;
+            }
+
+.edit-fooditem-calorie {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-fooditem-calorie .edit-label label {
+        width: 100%;
+        text-align: right;
+        padding: 5px 15px 0 0;
+    }
+
+    .edit-fooditem-calorie .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-fooditem-calorie .edit-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.edit-fooditem-url {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-fooditem-url .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-fooditem-url .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-fooditem-url .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-fooditem-url .edit-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.edit-fooditem-group {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .edit-fooditem-group .edit-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .edit-fooditem-group .edit-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .edit-fooditem-group .edit-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .edit-fooditem-group .edit-input select {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.edititem-submit-btn {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    margin: 10px 40px 10px auto;
+    padding: 0px 40px;
+}
+
+    .edititem-submit-btn input {
+        background-color: #37d629;
+        color: #000;
+        font-weight: bold;
+        border: 1px solid #555;
+        width: 150px;
+    }
+
+        .edititem-submit-btn input:hover {
+            background-color: #c1ff94;
+            color: #000;
+            box-shadow: 0 0 1px 2px #37d629;
+            align-content: center;
+        }
+
+.edititem-backtogroup {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin: 10px 20px 20px 20px;
+}
+
+    .edititem-backtogroup a {
+        background-color: #37d629;
+        box-shadow: 2px 1px 0 0 #555;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+        .edititem-backtogroup a:hover {
+            background-color: #c1ff94;
+            box-shadow: none;
+            border: 1px solid #37d629;
+            border-radius: 25px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+/*=====================================
+    details food item ADMIN
+    =====================================*/
+
+.details-fooditem-container {
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    margin: auto;
+    box-shadow: 5px 10px #888;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(7, auto);
+    width: 60%;
+}
+
+    .details-fooditem-container hr {
+        height: 1px;
+        background-color: #37d629;
+        border: none;
+        width: 80%;
+        margin-left: 0;
+    }
+
+.details-fooditem-heading {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+}
+
+.details-fooditem-groupid {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 20px 20px 10px 20px;
+}
+
+    .details-fooditem-groupid .details-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-fooditem-groupid .details-label p {
+            width: 100%;
+            text-align: right;
+            padding: 0 15px 0 0;
+        }
+
+    .details-fooditem-groupid .details-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-fooditem-groupid .details-value p {
+            width: 300px
+        }
+
+.details-fooditem-name {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-fooditem-name .details-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-fooditem-name .details-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-fooditem-name .details-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-fooditem-name .details-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-fooditem-information {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-fooditem-information .details-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-fooditem-information .details-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-fooditem-information .details-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-fooditem-information .details-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-fooditem-calorie {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-fooditem-calorie .details-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-fooditem-calorie .details-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-fooditem-calorie .details-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-fooditem-calorie .details-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-fooditem-image {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 20px 10px 20px;
+}
+
+    .details-fooditem-image .details-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .details-fooditem-image .details-label p {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .details-fooditem-image .details-value {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .details-fooditem-image .details-value p {
+            padding: 5px 15px 0 0;
+        }
+
+.details-item-navigation {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    padding: 20px;
+    margin: 10px
+}
+
+    .details-item-navigation a {
+        background-color: #37d629;
+        box-shadow: 2px 1px 0 0 #555;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+        .details-item-navigation a:hover {
+            background-color: #c1ff94;
+            box-shadow: none;
+            border: 1px solid #37d629;
+            border-radius: 25px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+/*=====================================
+    Admin Create Food Item page
+    =====================================*/
+
+.create-fooditem-container {
+    background-color: #c1ff94;
+    color: #000;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888;
+    margin: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto)
+}
+
+.create-fooditem-heading {
+    background-color: #37d629;
+    color: #000;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 25px 0 0 0;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.create-fooditem-name {
+    margin: 20px 20px 10px 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+    .create-fooditem-name .create-label {
+        white-space: nowrap;
+        color: black;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+        .create-fooditem-name .create-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .create-fooditem-name .create-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .create-fooditem-name .create-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.create-fooditem-information {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+.create-foodgroup-information .create-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    white-space: nowrap;
+    color: black;
+}
+
+.create-fooditem-information .create-label label {
+    width: 100%;
+    text-align: right;
+    padding: 5px 10px 0 0;
+}
+
+.create-fooditem-information .create-input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+    .create-fooditem-information .create-input textarea {
+        background-color: #37d629;
+        color: #000;
+        height: 150px;
+        text-align: right;
+        padding: 5px 15px 0 0;
+    }
+
+        .create-fooditem-information .create-input textarea::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        .create-fooditem-information .create-input textarea::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px #555;
+        }
+
+        .create-fooditem-information .create-input textarea::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: 0 0 6px #555;
+            background-color: #c1ff94;
+            outline: 1px solid #888;
+        }
+
+.create-fooditem-calorie {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .create-fooditem-calorie .create-label label {
+        width: 100%;
+        text-align: right;
+        padding: 5px 15px 0 0;
+    }
+
+    .create-fooditem-calorie .create-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .create-fooditem-calorie .create-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.create-fooditem-image {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .create-fooditem-image .create-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .create-fooditem-image .create-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .create-fooditem-image .create-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .create-fooditem-image .create-input input {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.create-fooditem-group {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10px 20px 10px 20px;
+}
+
+    .create-fooditem-group .create-label {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        white-space: nowrap;
+        color: black;
+    }
+
+        .create-fooditem-group .create-label label {
+            width: 100%;
+            text-align: right;
+            padding: 5px 15px 0 0;
+        }
+
+    .create-fooditem-group .create-input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+        .create-fooditem-group .create-input select {
+            background-color: #37d629;
+            color: #000;
+        }
+
+.createitem-submit-btn {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    margin: 10px 40px 10px auto;
+    padding: 0px 40px;
+}
+
+    .createitem-submit-btn input {
+        background-color: #37d629;
+        color: #000;
+        font-weight: bold;
+        border: 1px solid #555;
+        width: 150px;
+    }
+
+        .createitem-submit-btn input:hover {
+            background-color: #c1ff94;
+            color: #000;
+            box-shadow: 0 0 1px 2px #37d629;
+            align-content: center;
+        }
+
+.createitem-backtogroup {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin: 10px 20px 20px 20px;
+}
+
+    .createitem-backtogroup a {
+        background-color: #37d629;
+        box-shadow: 2px 1px 0 0 #555;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+        .createitem-backtogroup a:hover {
+            background-color: #c1ff94;
+            box-shadow: none;
+            border: 1px solid #37d629;
+            border-radius: 25px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+
+
+/*=====================================
+    tracker page
+    =====================================*/
+.tracker-container {
+    width: fit-content;
+    background-color: #c1ff94;
+    box-shadow: 5px 10px #888888;
+    border-radius: 25px 0;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto auto auto auto 10px;
+    gap: 5px;
+    margin: auto;
+}
+
+.tracker-heading {
+    background-color: #37d629;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 25px 0 0 0;
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.calorie-tracker {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-left: 1px solid #37d629;
+    border-radius: 25px 0 0 0;
+    box-shadow: 2px 1px #555;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    margin: 10px 0 5px 10px;
+    padding-bottom: 10px;
+}
+
+.calorie-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    padding: 10px 0 0 10px;
+}
+
+.calorie-input {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;
+}
+
+    .calorie-input input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+.add-calorie-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px 5px;
+}
+
+.tracker-container .calorie-info-box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #37d629;
+    color: #000;
+    border-radius: 0 0 25px 0;
+    box-shadow: 2px 1px #555;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+}
+
+.water-tracker {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-left: 1px solid #37d629;
+    border-radius: 25px 0 0 0;
+    box-shadow: 2px 1px #555;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    margin: 10px 0 5px 10px;
+    padding-bottom: 10px;
+}
+
+.water-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    padding: 10px 0 0 10px;
+}
+
+.water-input {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;
+}
+
+    .water-input input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+.add-water-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px 5px;
+}
+
+.tracker-container .water-info-box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #37d629;
+    color: #000;
+    border-radius: 0 0 25px 0;
+    box-shadow: 2px 1px #555;
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+}
+
+.steps-tracker {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    border-left: 1px solid #37d629;
+    border-radius: 25px 0 0 0;
+    box-shadow: 2px 1px #555;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    margin: 5px 0 10px 10px;
+    padding-bottom: 10px;
+}
+
+.steps-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    margin: 0;
+    border-radius: 25px 0 0 0;
+    padding: 10px 0 0 10px;
+}
+
+.steps-input {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;
+}
+
+    .steps-input input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+.add-steps-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px 5px;
+}
+
+.tracker-container .steps-info-box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #37d629;
+    color: #000;
+    border-radius: 0 0 25px 0;
+    box-shadow: 2px 1px #555;
+    padding: 10px;
+    margin: 5px 10px 10px 10px;
+}
+
+.tracker-button {
+    margin: auto;
+    width: 120px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+
+    .tracker-button:hover {
+        background-color: #c1ff94;
+        color: #000;
+        box-shadow: 0 0 1px 2px #37d629;
+    }
+
+.reset-button {
+    margin: auto;
+    width: 120px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+
+    .reset-button:hover {
+        background-color: #c1ff94;
+        color: #000;
+        box-shadow: 0 0 1px 2px #37d629;
+    }
+
+/*=====================================
+    Tracker History Page
+  =====================================*/
+
+.history-container {
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #888;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+
+.history-heading {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    margin: 0;
+    padding: 10px;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+}
+
+.history-entries {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0 50px 20px 50px;
+}
+
+    .history-entries table {
+        width: 80%;
+        margin: auto;
+        border: 2px solid #c1ff94;
+        box-shadow: #555 10px 5px;
+    }
+
+        .history-entries table thead tr th {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .history-entries table tbody tr td {
+            border: 2px 0 2px 0 solid #c1ff94;
+        }
+
+        .history-entries table td,
+        .history-entries table th {
+            font-size: 12px;
+            padding: 3px 7px 2px 7px;
+        }
+
+        .history-entries table th {
+            font-size: 20px;
+            text-align: center;
+            background-color: #37d629;
+        }
+
+        .history-entries table td {
+            font-size: 16px;
+            text-align: center;
+            padding-top: 5px;
+            color: #000000;
+            background-color: #37d629;
+        }
+
+    .history-entries p {
+        margin-top: 5px;
+    }
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, auto);
+    background-color: #c1ff94;
+    border-radius: 25px 0;
+    box-shadow: 5px 10px #777;
+}
+
+.contact-information {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 5px;
+    padding: 20px;
+    color: #000;
+}
+
+.contact-details {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 5px;
+    padding: 10px 50px;
+    color: #000;
+}
+
+    .contact-details a {
+        color: #000;
+    }
+
+        .contact-details a:hover {
+            color: #37d629;
+        }
+
+
+.contact-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #37d629;
+    color: #000;
+    border-radius: 25px 0 0 0;
+    text-align: center;
+}
+
+
+
+.contact-form {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 5px;
+    padding: 20px;
+}
+
+    .contact-form .row .form-group input {
+        background-color: #37d629;
+        color: #000;
+    }
+
+        .contact-form .row .form-group input::placeholder {
+            color: #000;
+        }
+
+    .contact-form .row .form-group textarea {
+        background-color: #37d629;
+        color: #000;
+        height: 150px;
+        padding: 5px 15px 0 0;
+    }
+
+
+        .contact-form .row .form-group textarea::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        .contact-form .row .form-group textarea::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px #555;
+        }
+
+        .contact-form .row .form-group textarea::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: 0 0 6px #555;
+            background-color: #c1ff94;
+            outline: 1px solid #888;
+        }
+
+        .contact-form .row .form-group textarea::placeholder {
+            color: #000;
+        }
+
+    .contact-form .submit-btn input {
+        width: 150px;
+        color: #000;
+    }
+
+.contact-map {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 10px;
+    padding: 5px;
+}
+
+    .contact-map img {
+        border: 2px solid #37d629;
+    }
+
+    .contact-map a {
+        text-decoration: none;
+        /*text-decoration-color: #000 !important;*/
+    }
+
+        .contact-map a:hover {
+            text-decoration: underline;
+            /*color: #37d629 !important;*/
+        }

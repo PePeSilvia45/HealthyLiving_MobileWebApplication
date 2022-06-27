@@ -1,0 +1,106 @@
+﻿@model IEnumerable<HealthyLiving.Models.Intake>
+@{
+    ViewBag.Title = "Home Page";
+}
+@if (User.IsInRole("Member"))
+{
+    <div class="index-container-user">
+        <div class="calorie-info-box text-center">
+            <h2>Calorie Information</h2>
+            <h3>@ViewBag.DailyIntakes.TotalDailyCalorieIntake cal</h3>
+        </div>
+
+        <div class="water-info-box text-center">
+            <h2>Water Information</h2>
+            <h3>@ViewBag.DailyIntakes.TotalDailyWaterIntake ml</h3>
+        </div>
+
+        <div class="steps-info-box text-center">
+            <h2>Steps Information</h2>
+            <h3>@ViewBag.DailyIntakes.TotalStepsTaken steps</h3>
+        </div>
+        <div class="appinformation">
+            <div class="appinformation-heading">
+                <h1>What is the App</h1>
+            </div>
+            <div class="appinformation-body">
+                <p>
+                    Welcome to the Healthy Living application. <br />
+                    This is app is a lifestyle companion that will help anyone who wishes to gain more control of their daily life. With a great team 
+                    that delivers weekly podcasts to help with motivation and to help educate listeners on planning <br />
+                    their routines. We also have a great source of reading to help you understand calories as the different food groups and some of the 
+                    food items within them that will help you pick what is best for you. <br />
+                    You can learn as a guest or become a member and use our tracker feature to help you track your daily calorie intake as well as your 
+                    daily water intake and steps taken. You can also compare your daily progress to your past records by viewing your history.
+                </p>
+            </div>
+        </div>
+        <div class="howitworks">
+            <div class="howitworks-heading">
+                <h1>How the App Works</h1>
+            </div>
+            <div class="howitworks-body">
+                <p>
+                    This application has a few different features. <br />
+                    Firstly, we have our quality Podcast where you can browse our many available episodes to find one that interests you, you can 
+                    also wait come back every Thursday to listen to a new podcast each week. <br />
+                    Moving on to our Understanding Calories section you can read up on quality information on how you can best understand 
+                    calories in a less intimidating fashion. Everything from how to check the calories in food to balancing energy and calories 
+                    efficiently. <br />
+                    You can browse each of the five major Food Groups to gain more information on different foods that you can find in each group. <br />
+                    Members can also use our Tracker feature to add calories, water and or daily steps and keep track of your total daily intakes.
+                    We also provide the option to reset your days totals. <br />
+                    We also provide a well detailed History of each members intakes for each day they have been with us. This will help people 
+                    keep great track of their lifestyle. <br />
+                    Finally, if there Is anything you need further information about, or you have any suggestions you can always contact us by 
+                    navigating to the contact section located in the lower left of our application. <br />
+
+                </p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+<div class="index-container-guest">
+    <div class="appinformation">
+        <div class="appinformation-heading">
+            <h1>What is the App</h1>
+        </div>
+        <div class="appinformation-body">
+            <p>
+                Welcome to the Healthy Living application. <br />
+                This is app is a lifestyle companion that will help anyone who wishes to gain more control of their daily life. With a great team
+                that delivers weekly podcasts to help with motivation and to help educate listeners on planning <br />
+                their routines. We also have a great source of reading to help you understand calories as the different food groups and some of the
+                food items within them that will help you pick what is best for you. <br />
+                You can learn as a guest or become a member and use our tracker feature to help you track your daily calorie intake as well as your
+                daily water intake and steps taken. You can also compare your daily progress to your past records by viewing your history.
+            </p>
+        </div>
+    </div>
+    <div class="howitworks">
+        <div class="howitworks-heading">
+            <h1>How the App Works</h1>
+        </div>
+        <div class="howitworks-body">
+            <p>
+                This application has a few different features. <br />
+                Firstly, we have our quality Podcast where you can browse our many available episodes to find one that interests you, you can
+                also wait come back every Thursday to listen to a new podcast each week. <br />
+                Moving on to our Understanding Calories section you can read up on quality information on how you can best understand
+                calories in a less intimidating fashion. Everything from how to check the calories in food to balancing energy and calories
+                efficiently. <br />
+                You can browse each of the five major Food Groups to gain more information on different foods that you can find in each group. <br />
+                Members can also use our Tracker feature to add calories, water and or daily steps and keep track of your total daily intakes.
+                We also provide the option to reset your days totals. <br />
+                We also provide a well detailed History of each members intakes for each day they have been with us. This will help people
+                keep great track of their lifestyle. <br />
+                Finally, if there Is anything you need further information about, or you have any suggestions you can always contact us by
+                navigating to the contact section located in the lower left of our application. <br />
+            </p>
+        </div>
+    </div>
+</div>
+}
+

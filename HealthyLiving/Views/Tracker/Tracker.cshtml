@@ -1,0 +1,106 @@
+﻿@model HealthyLiving.Models.Intake
+
+@{
+    ViewBag.Title = "Tracker";
+}
+
+
+@if (TempData["AlertMessage"] != null)
+{
+    if (TempData["AlertSuccess"] != null && TempData["AlertSuccess"] as string == "success")
+    {
+        <br />
+        <div class="alert alert-success">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+        <br />
+    }
+    else if (TempData["AlertSuccess"] != null && TempData["AlertSuccess"] as string == "fail")
+    {
+        <br />
+        <div class="alert alert-danger">
+            <strong>@TempData["AlertMessage"]</strong>
+        </div>
+        <br />
+    }
+}
+
+<div class="tracker-container">
+
+    <div class="tracker-heading">
+        <h2>Tracker</h2>
+    </div>
+
+    <div class="calorie-info-box text-center">
+        <h3>Calories</h3>
+        <h4>@ViewBag.DailyIntake.TotalDailyCalorieIntake cal</h4>
+    </div>
+
+    <div class="water-info-box text-center">
+        <h3>Water Consumption</h3>
+        <h4>@ViewBag.DailyIntake.TotalDailyWaterIntake ml</h4>
+    </div>
+
+    <div class="steps-info-box text-center">
+        <h3>Steps Taken</h3>
+        <h4>@ViewBag.DailyIntake.TotalStepsTaken steps</h4>
+    </div>
+
+    @using (Html.BeginForm("AddCalories", "Tracker", FormMethod.Post, new { @class = "calorie-tracker" }))
+    {
+        @Html.AntiForgeryToken();
+        <div class="calorie-heading">
+            <h4><b><u>Calories</u></b></h4>
+        </div>
+        <div class="calorie-input">
+            <input type="number" name="getCalories" value="Enter Calories" />
+        </div>
+        <div class="add-calorie-btn">
+            <input class="tracker-button" type="submit" name="addCalories" value="Add Calories" onclick="return ConfirmationDialog()" />
+            <input class="reset-button" type="submit" name="resetCalories" value="Reset Calories" formaction="@Url.Action("ResetCalories", "Tracker")" onclick="return ConfirmationDialog()" />
+        </div>
+    }
+
+    <hr />
+
+    @using (Html.BeginForm("AddWater", "Tracker", FormMethod.Post, new { @class = "water-tracker" }))
+    {
+        @Html.AntiForgeryToken();
+        <div class="water-heading">
+            <h4><b><u>Water</u></b></h4>
+        </div>
+        <div class="water-input">
+            <input type="number" name="getWater" value="Water Intake" />
+        </div>
+        <div class="add-water-btn">
+            <input class="tracker-button" type="submit" name="addWater" value="Add Water" onclick="return ConfirmationDialog()" />
+            <input class="reset-button" type="submit" name="resetWater" value="Reset Water" formaction="@Url.Action("ResetWater", "Tracker")" onclick="return ConfirmationDialog()" />
+        </div>
+    }
+
+    <hr />
+
+    @using (Html.BeginForm("AddSteps", "Tracker", FormMethod.Post, new { @class = "steps-tracker" }))
+    {
+        @Html.AntiForgeryToken();
+        <div class="steps-heading">
+            <h4><b><u>Steps</u></b></h4>
+        </div>
+        <div class="steps-input">
+            <input type="number" name="getSteps" value="Water Intake" />
+        </div>
+        <div class="add-steps-btn">
+            <input class="tracker-button" type="submit" name="addSteps" value="Add Steps" onclick="return ConfirmationDialog()" />
+            <input class="reset-button" type="submit" name="resetSteps" value="Reset Steps" formaction="@Url.Action("ResetSteps", "Tracker")" onclick="return ConfirmationDialog()" />
+        </div>
+    }
+</div>
+
+<script type="text/javascript">
+    function ConfirmationDialog() {
+        if (confirm("Are you sure you want continue?"))
+            return true;
+        else
+            return false;
+    }
+</script>

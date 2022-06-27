@@ -1,0 +1,75 @@
+﻿@model HealthyLiving.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+<div class="row">
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+    <div class="register-container">
+        @Html.AntiForgeryToken()
+        <div class="register-heading"><h2>Register User</h2></div>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <div class="form-group register-email">
+            <div class="register-email-label">
+                @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+            </div>
+            <div class="register-email-input">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group register-firstname">
+            <div class="register-firstname-label">
+                @Html.LabelFor(m => m.FirstName, new { @class = "control-label" })
+            </div>
+            <div class="register-firstname-input">
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group register-lastname">
+            <div class="register-lastname-label">
+                @Html.LabelFor(m => m.LastName, new { @class = "control-label" })
+            </div>
+            <div class="register-lastname-input">
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group register-mobile">
+            <div class="register-mobile-label">
+                @Html.LabelFor(m => m.PhoneNumber, new { @class = "control-label" })
+            </div>
+            <div class="register-mobile-input">
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group register-password">
+            <div class="register-password-label">
+                @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+            </div>
+            <div class="register-password-input">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group register-confirmpassword">
+            <div class="register-confirmpassword-label">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label" })
+            </div>
+            <div class="register-confirmpassword-input">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="register-login">
+            <p class="text-center">
+                @Html.ActionLink("Already have an account?", "Login")
+            </p>
+        </div>
+        <div class="form-group register-btn text-center">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

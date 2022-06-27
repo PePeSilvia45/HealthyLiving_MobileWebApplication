@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HealthyLiving.Models.FoodItem>
+@{
+    ViewBag.Title = ViewBag.FoodGroup.FoodGroupName;
+}
+<div class="viewitem-container">
+    <div class="viewitem-heading">
+        <h2>@ViewBag.FoodGroup.FoodGroupName</h2>
+    </div>
+    <div class="back-button">
+        <a href="@Url.Action("FoodGroups", "Home")">
+            <img class="" src="~/Images/Icons/back.png" alt="Back Icon" />
+            <p>BACK</p>
+        </a>
+    </div>
+    <div class="viewitem-information">
+        <p>
+            @ViewBag.FoodGroup.FoodGroupInformation
+        </p>
+    </div>
+
+    <div class="viewitems-item">
+        @foreach (var item in ViewBag.FoodItems)
+        {
+            <div class="row">
+                <div class="food-img col-sm-3">
+                    <img src="~/@item.ImageUrl" alt="picture of @item.FoodItemName" class="img-responsive" />
+                </div>
+                <div class="food-name col-sm-2">
+                    <p>@item.FoodItemName</p>
+                </div>
+                <div class="food-description col-sm-5">
+                    <p>@item.FoodItemInformation</p>
+                </div>
+                <div class="food-calories col-sm-2">
+                    <p>@item.CalorieCount cal</p>
+                </div>
+            </div>
+
+            if (item.FoodItemId != ViewBag.LastItem.FoodItemId)
+            {
+                <hr />
+            }
+        }
+    </div>
+</div>

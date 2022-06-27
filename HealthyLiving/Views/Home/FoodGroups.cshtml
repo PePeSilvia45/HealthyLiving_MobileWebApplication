@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "FoodGroups";
+}
+
+<div class="foodgroup-container">
+    <div class="foodgroup-heading">
+        <h2>Food Groups</h2>
+    </div>
+
+    <div class="foodgroup-information">
+        <p>
+            As nutrition science has progressed over time, scientists have discovered vitamins, minerals,
+            and other components that make up our foods, and surely, there are more yet to be discovered.
+            Food groups simplify dietary recommendations by focusing on foods instead of nutrients. For example,
+            it’s much easier to try to eat two cups of fruit a day than 75 milligrams of vitamin C and 25 grams of fiber.
+            The USDA Food Patterns provide the recommended amounts of each food group and subgroup at 12 different
+            calorie levels, ranging from 1,000 to 3,200. These patterns are developed using food pattern modeling.
+            By eating recommended amounts, individuals can meet their nutritional needs without having to track
+            dozens of individual nutrients.
+        </p>
+    </div>
+
+    <div class="image-info text-center">
+        <h3><b><u>Hover over each group for more info</u></b></h3>
+    </div>
+
+    @foreach (var item in ViewBag.FoodGroups)
+    {
+        <div class="col-lg-6 foodgroup">
+            <a href="@Url.Action("ViewItems", "Home", new {id = item.FoodGroupId})" >
+                <img class="foodgroup-img img-responsive" src="~/@item.FoodGroupImageUrl" alt="picture of @item.FoodGroupName foods"/>
+                <div class="overlay">
+                    <h4>@item.FoodGroupName</h4>
+                </div>
+            </a>
+        </div>
+    }
+</div>

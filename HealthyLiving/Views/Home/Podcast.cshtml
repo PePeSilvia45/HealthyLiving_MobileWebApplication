@@ -1,0 +1,76 @@
+﻿@model IEnumerable<HealthyLiving.Models.Podcast>
+@{
+    ViewBag.Title = "Podcast";
+}
+
+<script>
+    function pauseAll(element) {
+        $("audio").not(element).each(function (index, audio) {
+            audio.pause();
+        })
+    }
+</script>
+
+<div class="podcast-container">
+
+
+    <div class="podcast-heading">
+        <h2>Healthy Eating Podcast</h2>
+    </div>
+
+    <div class="podcast-information">
+
+        <div class="podcast-information-description">
+            <p class="text-center">
+                The best place for all the information you need on starting your healthy lifestyle
+                today. Join us each month as wee intoduce you to success, motivation and insperation.
+                Join our Q&A sessions to have all your questions answered by our professional team of
+                fitness and diet experts. Get on track no matter who you are this is a place for all!
+            </p>
+        </div>
+
+        <div class="podcast-information-logo">
+            <img class="podcast-logo img-responsive" src="~/Images/Logos/healthylivingpodcastlogo.png" alt="Healthy Living Podcast Logo" width="200" height="200" />
+        </div>
+
+    </div>
+
+    <br />
+    <div class="podcast-player">
+        <table id="dataTable" class="table">
+            <thead>
+                <tr>
+                    <th style="border-radius: 25px 0 0 0;">Episode Name</th>
+                    <th>Listen Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    if (item != Model.Last())
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <audio controls onplay="pauseAll(this);">
+                                    <source src="@Url.Content(item.FilePath)" type="audio/mp3" />
+                                </audio>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <audio controls onplay="pauseAll(this);">
+                                    <source src="@Url.Content(item.FilePath)" type="audio/mp3" />
+                                </audio>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

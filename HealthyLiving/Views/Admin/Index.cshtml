@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "FoodGroups";
+}
+
+<div class="admin-foodgroup-container">
+    <div class="admin-foodgroup-heading">
+        <h2>Food Groups</h2>
+    </div>
+
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="admin-foodgroup-items">
+            @foreach (var item in ViewBag.FoodGroups)
+            {
+                <div class="row">
+                    <div class="admin-food-img col-sm-3">
+                        <img src="~/@item.FoodGroupImageUrl" alt="picture of @item.FoodGroupName" class="img-responsive" />
+                    </div>
+                    <div class="admin-foodgroup-name col-sm-2">
+                        <p>@item.FoodGroupName</p>
+                    </div>
+                    <div class="admin-control col-sm-7">
+                        <ul>
+                            <li>@Html.ActionLink("Edit", "EditGroup", new { id = item.FoodGroupId })</li>
+                            <li>@Html.ActionLink("Details", "DetailsGroup", new { id = item.FoodGroupId })</li>
+                            <li>@Html.ActionLink("Delete", "DeleteGroup", new { id = item.FoodGroupId }, new { onclick = "return ConfirmationDialog();" })</li>
+                            <li>@Html.ActionLink("View Items", "ViewItems", new { id = item.FoodGroupId })</li>
+                        </ul>
+                    </div>
+                </div>
+
+                if (item.FoodGroupId != ViewBag.LastItem.FoodGroupId)
+                {
+                    <hr />
+                }
+            }
+        </div>
+    }
+</div>
+
+<script type="text/javascript">
+    function ConfirmationDialog() {
+        if (confirm("Are you sure you want continue?"))
+            return true;
+        else
+            return false;
+    }
+</script>

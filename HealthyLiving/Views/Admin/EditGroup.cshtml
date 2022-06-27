@@ -1,0 +1,63 @@
+﻿@model HealthyLiving.Models.FoodGroup
+
+@{
+    ViewBag.Title = "Edit Group";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="edit-foodgroup-container">
+
+        <div class="edit-foodgroup-heading">
+            <h2>Edit Food Group</h2>
+        </div>
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.FoodGroupId)
+
+        <div class="edit-foodgroupname">
+            <div class="edit-label">
+                @Html.LabelFor(model => model.FoodGroupName, htmlAttributes: new { @class = "control-label" })
+            </div>
+
+            <div class="edit-input">
+                @Html.EditorFor(model => model.FoodGroupName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FoodGroupName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="edit-foodgroupinformation">
+            <div class="edit-label">
+                @Html.LabelFor(model => model.FoodGroupInformation, htmlAttributes: new { @class = "control-label" })
+            </div>
+            <div class="edit-input">
+                @Html.EditorFor(model => model.FoodGroupInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FoodGroupInformation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="edit-foodgroupurl">
+            <div class="edit-label">
+                @Html.LabelFor(model => model.FoodGroupImageUrl, htmlAttributes: new { @class = "control-label" })
+            </div>
+            <div class="edit-input">
+                @Html.EditorFor(model => model.FoodGroupImageUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FoodGroupImageUrl, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="editgroup-submit-btn">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+        <div class="edit-backtogroup">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+}

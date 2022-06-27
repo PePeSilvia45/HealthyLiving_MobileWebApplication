@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="styles/about.css">
+    <link href="~/Styles/Style.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.1.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        @ViewBag.Title - Healthy Living
+    </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color: #999;">
+    <div class="navbar nav-center navbar-default navbar-fixed-top bg-3">
+        <div class="nav-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index", "Home")" class="nav-img">
+                    <img src="~/Images/Logos/healthylivingnavlogo.png" class="img-responsive " alt="Healthy Living Podcast Logo" width="100" height="100" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (Request.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li style="color:#000;">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Podcast", "Podcast", "Home")</li>
+                            <li>@Html.ActionLink("Understanding Calories", "UnderstandingCalories", "Home")</li>
+                            <li>@Html.ActionLink("Food Groups", "Index", "Admin")</li>
+                        }
+                        else if (User.IsInRole("Member"))
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Podcast", "Podcast", "Home")</li>
+                            <li>@Html.ActionLink("Understanding Calories", "UnderstandingCalories", "Home")</li>
+                            <li>@Html.ActionLink("Tracker", "Tracker", "Tracker")</li>
+                            <li>@Html.ActionLink("History", "History", "Tracker")</li>
+                            <li>@Html.ActionLink("Food Groups", "FoodGroups", "Home")</li>
+                        }
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Podcast", "Podcast", "Home")</li>
+                        <li>@Html.ActionLink("Understanding Calories", "UnderstandingCalories", "Home")</li>
+                        <li>@Html.ActionLink("Food Groups", "FoodGroups", "Home")</li>
+                    }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="margin-top:100px">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer-container">
+                <div class="footer-author text-center"><p>James Park 2022</p></div>
+                <div class="footer-company text-center"><p>Healthy Living&copy;</p></div>
+                <div class="footer-contact text-center">@Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, new { @class = "body" })</div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
